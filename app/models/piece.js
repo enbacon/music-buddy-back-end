@@ -9,6 +9,14 @@ const pieceSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  memorized: {
+    type: Boolean,
+    required: true
+  },
+  piano: {
+    type: Boolean,
+    required: true
+  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
