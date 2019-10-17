@@ -17,6 +17,7 @@ const pieceSchema = new mongoose.Schema({
     type: Boolean,
     required: true
   },
+  length: Number,
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
