@@ -30,7 +30,7 @@ const router = express.Router()
 // INDEX
 // GET /performances
 router.get('/performances', requireToken, (req, res, next) => {
-  Performance.find({owner: req.user._id})
+  Performance.find({ owner: req.user._id }).sort({date: 'ascending'})
     .populate('pieces')
     .then(performances => {
       // `performances` will be an array of Mongoose documents
